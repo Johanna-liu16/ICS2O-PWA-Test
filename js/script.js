@@ -21,3 +21,18 @@ if (navigator.serviceWorker) {
 function myButtonClicked() {
   document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
 }
+
+/**
+ * This function converts fahrenheit.
+ */
+function calculate() {
+  // input
+  const F = parseInt(document.getElementById("fahrenheit-degrees").value)
+
+  // process
+  const celsius = ((F - 32) * 5) / 9
+
+  // output
+  document.getElementById("answers").innerHTML =
+    "The degrees in celsius is: " + celsius.toFixed(2) + " °C"
+}
